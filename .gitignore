@@ -1,0 +1,6 @@
+
+.vscode/settings.json
+app/config/private.key
+Collections.code-workspace
+install.sh
+random.salt.sh
