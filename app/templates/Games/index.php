@@ -3,7 +3,8 @@
 <table>
     <tr>
         <th>Title</th>
-        <th>Created</th>
+        <th>Year</th>
+        <th>Genre</th>
     </tr>
 
     <!-- Here is where we iterate through our $articles query object, printing out article info -->

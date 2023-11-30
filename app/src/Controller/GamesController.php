@@ -10,4 +10,10 @@ class GamesController extends AppController
         $games = $this->Paginator->paginate($this->Games->find());
         $this->set(compact('games'));
     }
+
+    public function view($slug = null)
+    {
+        $game = $this->Games->findBySlug($slug)->firstOrFail();
+        $this->set(compact('game'));
+    }
 }
