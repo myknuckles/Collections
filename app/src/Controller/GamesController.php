@@ -16,4 +16,18 @@ class GamesController extends AppController
         $game = $this->Games->findBySlug($slug)->firstOrFail();
         $this->set(compact('game'));
     }
+
+	public function add()
+    {
+        if ($this->request->is('games')) {
+            $games = $this->Games->newEntity($this->request->getData());
+            if ($this->Games->save($games)) {
+                $this->Flash->success(__('The game has been saved.'));
+                return $this->redirect(['action' => 'index']);
+            } else {
+                $this->Flash->error(__('Unable to add the game.'));
+            }
+            $this->set('games', $games);
+        }
+    }
 }
