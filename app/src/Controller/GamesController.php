@@ -19,8 +19,10 @@ class GamesController extends AppController
 
 	public function add()
     {
+
         if ($this->request->is('post')) {
             $games = $this->Games->newEntity($this->request->getData());
+            $games->created_by = 1;
             if ($this->Games->save($games)) {
                 $this->Flash->success(__('The game has been saved.'));
                 return $this->redirect(['action' => 'index']);
