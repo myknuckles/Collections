@@ -4,7 +4,6 @@
     <tr>
         <th>Title</th>
         <th>Year</th>
-        <th>Genre</th>
     </tr>
 
     <!-- Here is where we iterate through our $articles query object, printing out article info -->
@@ -15,7 +14,7 @@
             <?= $this->Html->link($game->title, ['action' => 'view', $game->slug]) ?>
         </td>
         <td>
-            <?= $game->created->format(DATE_RFC850) ?>
+            <?= $this->Html->link($game->year,['action' => 'view', $game->slug]) ?>
         </td>
     </tr>
     <?php endforeach; ?>
