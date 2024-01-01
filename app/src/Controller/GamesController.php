@@ -17,19 +17,26 @@ class GamesController extends AppController
         $this->set(compact('game'));
     }
 
+<<<<<<< Updated upstream
 	public function add()
+=======
+    public function add()
+>>>>>>> Stashed changes
     {
-
         if ($this->request->is('post')) {
             $games = $this->Games->newEntity($this->request->getData());
             $games->created_by = 1;
             if ($this->Games->save($games)) {
                 $this->Flash->success(__('The game has been saved.'));
                 return $this->redirect(['action' => 'index']);
+<<<<<<< Updated upstream
             } else {
                 $this->Flash->error(__('Unable to add the game.'));
             }
             $this->set('games', $games);
+=======
+            }
+>>>>>>> Stashed changes
         }
     }
 }
