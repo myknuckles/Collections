@@ -35,10 +35,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 </head>
 <body>
-    <nav class="navbar navbar-text">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-    </div>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand navbar-text">Navbar</a>
+        </div>
     </nav>
     <div class="container">
         <?= $this->Flash->render() ?>
